@@ -13,8 +13,19 @@ export class Questions {
       `https://opentdb.com/api.php?amount=20${category}${difficulty}`
     );
     const resData = await res.json();
-    this.ui.displayQuestions(resData.results);
-    this.ui.setName(name);
-    this.load.classList.add("d-none");
+    if (resData.response_code === 0) {
+      this.ui.displayQuestions(resData.results);
+      this.ui.setName(name);
+      this.load.classList.add("d-none");
+    } else if (resData.response_code === 1) {
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+      const res = await fetch(
+        `https://opentdb.com/api.php?amount=20${category}`
+      );
+      const resData = await res.json();
+      this.ui.displayQuestions(resData.results);
+      this.ui.setName(name);
+      this.load.classList.add("d-none");
+    }
   }
 }
