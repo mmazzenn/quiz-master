@@ -1,0 +1,375 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Start Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Montserrat:wght@300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #FFF;
+  border-left: 2px solid #eee;
+  -webkit-box-shadow: 0px 0px 21px 0px #0003 inset;
+  box-shadow: 0px 0px 21px 0px #0003 inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  -webkit-box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
+  box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
+  border-radius: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #7E30E1
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button,
+a {
+  font-family: 'Diphylleia', serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture {
+  display: block;
+}
+
+/* End Global */
+
+/* Start Quiz App */
+
+.quiz-app {
+  background-image: url('../assets/quiz.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.quiz-app::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.quiz-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url('../assets/app.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 40px;
+  border-radius: 10px;
+  min-width: 50%;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+
+/* End Quiz App */
+
+/* Start Intro */
+
+.intro p {
+  font-size: 24px;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.start-btn {
+  background-color: #163020;
+  color: #FFF;
+  padding: 17px 15px;
+  border-radius: 30px;
+  line-height: 20px;
+  display: block;
+  font-weight: 600;
+}
+
+.start-btn:hover {
+  color: #163020;
+  background-color: #FFF;
+}
+
+/* End Intro */
+
+/* Start Options */
+
+.options {
+  position: relative;
+  z-index: 9999;
+}
+
+.options label {
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.options input,
+.options select {
+  border: none;
+  outline: none;
+}
+
+.options input:focus,
+.options select:focus {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 1px 1px 10px 1px var(--main-color);
+  box-shadow: 1px 1px 10px 1px var(--main-color);
+}
+
+select {
+  padding: 10px;
+}
+
+select option {
+  border: none;
+  background: #161A30;
+  color: #fff;
+}
+
+.begin-btn {
+  background-color: #163020;
+  color: #FFF;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  font-weight: 500
+}
+
+.begin-btn:hover {
+  color: #163020;
+  background-color: #FFF;
+}
+
+/* End Options */
+
+/* Start Questions */
+
+.questions .question-box {
+  background-color: #EEF5FF;
+  color: var(--main-color);
+  border-radius: 10px;
+}
+
+.questions .question-box p {
+  font-weight: 500;
+}
+
+.questions .question-box p:first-child {
+  font-size: 22px;
+}
+
+.questions .question-box p:last-child {
+  font-size: 18px;
+  color: #A25772;
+}
+
+.questions button {
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 30px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #7071E8;
+  color: #FFF;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.questions button.active {
+  background-color: #B31312;
+}
+
+.questions .result {
+  gap: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .questions .result {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.questions .score {
+  background-color: #265073;
+  padding: 10px 20px;
+  color: #FFF;
+  border-radius: 10px;
+}
+
+.questions .score span:last-child {
+  color: #ECF4D6;
+}
+
+/* End Questions */
+
+/* Start Result */
+
+.result-box p {
+  background-color: #EEF5FF;
+  color: var(--main-color);
+  text-align: center;
+  font-weight: 500;
+}
+
+.result-box button {
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 50px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #7071E8;
+  color: #FFF;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.result-box button:hover {
+  color: #7071E8;
+  background-color: #FFF;
+}
+
+/* End Result */
+
+/* Start Loading */
+
+.loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99999999;
+  height: 100%;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loading span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 4px solid red;
+  border-right: 4px solid transparent;
+  border-left: 4px solid red;
+  border-bottom: 4px solid transparent;
+  -webkit-animation: rotation 500ms infinite linear;
+  animation: rotation 500ms infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* End Loading */
