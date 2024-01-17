@@ -22,7 +22,6 @@ export class Ui {
     document.querySelector(".options").classList.add("d-none");
     document.querySelector(".questions").classList.remove("d-none");
     document.querySelector("#userScore").innerHTML = 0;
-    console.log(list);
     this.questionUi(list);
   }
 
